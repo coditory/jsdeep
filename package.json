@@ -1,8 +1,8 @@
 {
   "name": "@coditory/jsdeep",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Deep operations on json objects",
-  "main": "./dist/jsdeep.js",
+  "main": "./dist/jsdeep.min.js",
   "homepage": "https://github.com/coditory/jsdeep",
   "license": "WTFPL",
   "repository": {
