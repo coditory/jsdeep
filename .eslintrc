@@ -1,1 +1,1 @@
-extends: coditorium
+extends: "@coditory/eslint-config-coditory"

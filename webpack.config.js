@@ -1,48 +1,39 @@
-const webpack = require('webpack');
 const path = require('path');
-const yargs = require('yargs');
 const libraryName = require('./package').name;
 
-const isProduction = yargs.argv.env === 'production'; // use --env with webpack 2
+const outputFile = (opts) =>
+  opts.production
+    ? `${libraryName}.min.js`
+    : `${libraryName}.js`;
 
-const plugins = () => (
-  isProduction ?
-    [new webpack.optimize.UglifyJsPlugin({ minimize: true, sourceMap: true })] :
-    []
-);
-
-const outputFile = () => (
-  isProduction ?
-    `${libraryName}.min.js` :
-    `${libraryName}.js`
-);
-
-module.exports = {
+const webpackConfig = (opts) => ({
   entry: './lib',
-  devtool: 'source-map',
-  plugins: plugins(),
+  devtool: !opts.production && 'source-map',
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          plugins: ['transform-runtime']
-        }
-      },
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/
+        loader: 'babel-loader'
       }
     ]
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: outputFile(),
+    filename: outputFile(opts),
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true
   }
+});
+
+const createConfig = (opts) => {
+  const mode = opts.mode || 'production';
+  // eslint-disable-next-line
+  console.error(`Starting webpack in mode: ${mode}`);
+  return webpackConfig({
+    production: mode === 'production'
+  });
 };
+
+module.exports = (_, opts) => createConfig(opts);

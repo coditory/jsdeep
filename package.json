@@ -16,8 +16,8 @@
   "scripts": {
     "lint": "eslint .",
     "build": "npm run build:normal && npm run build:min",
-    "build:normal": "webpack",
-    "build:min": "webpack --env production",
+    "build:normal": "webpack --mode development",
+    "build:min": "webpack --mode production",
     "clean": "rimraf ./dist ./coverage",
     "test": "jest",
     "coverage": "jest --coverage",
@@ -28,23 +28,19 @@
     "postversion": "git push && git push --tags && npm publish --access public && npm run clean"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@coditory/eslint-config-coditory": "^1.0.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-babili": "0.1.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-runtime": "^6.26.0",
     "chai": "^4.2.0",
     "coveralls": "^3.0.2",
     "eslint": "^5.12.0",
-    "eslint-config-coditorium": "^1.4.0",
-    "eslint-loader": "^2.1.1",
     "istanbul": "v1.1.0-alpha.1",
     "jest": "^23.6.0",
     "mkdirp": "^0.5.1",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.0",
-    "yargs": "^12.0.5"
+    "webpack-cli": "^3.2.0"
   }
 }

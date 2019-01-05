@@ -1,9 +1,9 @@
 import { deepFreeze } from './index';
 
-const expectFrozen = obj =>
+const expectFrozen = (obj) =>
   expect(Object.isFrozen(obj)).toBe(true);
 
-const expectNotFrozen = obj =>
+const expectNotFrozen = (obj) =>
   expect(Object.isFrozen(obj)).toBe(false);
 
 describe('deepFreeze:', () => {
