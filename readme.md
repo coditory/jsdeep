@@ -7,7 +7,7 @@
 
 A library that contains basic operations on nested json structures.
 
-[Demo page](https://jsbin.com/masimiseva/9/edit?html,js,console)
+[Demo page](https://jsbin.com/fugeranaro/edit?html,js,console)
 
 ## Features
 

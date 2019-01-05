@@ -1,6 +1,6 @@
 {
   "name": "@coditory/jsdeep",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deep operations on json objects",
   "main": "./dist/jsdeep.js",
   "homepage": "https://github.com/coditory/jsdeep",

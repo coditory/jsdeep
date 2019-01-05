@@ -1,5 +1,5 @@
 const path = require('path');
-const libraryName = require('./package').name;
+const libraryName = require('./package').name.split('/').pop();
 
 const outputFile = (opts) =>
   opts.production
