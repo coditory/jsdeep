@@ -1,8 +1,9 @@
 {
   "name": "@coditory/jsdeep",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Deep operations on json objects",
-  "main": "./dist/jsdeep.min.js",
+  "main": "./lib/index.js",
+  "browser": "./dist/jsdeep.min.js",
   "homepage": "https://github.com/coditory/jsdeep",
   "license": "WTFPL",
   "repository": {
@@ -16,8 +17,8 @@
   "scripts": {
     "lint": "eslint .",
     "build": "npm run build:normal && npm run build:min",
-    "build:normal": "webpack --mode development",
-    "build:min": "webpack --mode production",
+    "build:normal": "webpack --mode development --target web",
+    "build:min": "webpack --mode production --target web",
     "clean": "rimraf ./dist ./coverage",
     "test": "jest",
     "coverage": "jest --coverage",
@@ -31,8 +32,6 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@coditory/eslint-config-coditory": "^1.0.1",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "chai": "^4.2.0",
     "coveralls": "^3.0.2",

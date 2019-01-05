@@ -1,4 +1,4 @@
-import { deepExists } from './index';
+const { deepExists } = require('./index');
 
 describe('deepExists:', () => {
   test('should confirm existsence of embedded property', () => {

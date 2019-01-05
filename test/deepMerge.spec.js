@@ -1,4 +1,4 @@
-import { deepMerge } from './index';
+const { deepMerge } = require('./index');
 
 describe('deepMerge:', () => {
   test('should create new parent objects and copy siblings', () => {

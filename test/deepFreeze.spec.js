@@ -1,4 +1,4 @@
-import { deepFreeze } from './index';
+const { deepFreeze } = require('./index');
 
 const expectFrozen = (obj) =>
   expect(Object.isFrozen(obj)).toBe(true);
@@ -14,12 +14,14 @@ describe('deepFreeze:', () => {
     expectFrozen(frozen);
   });
 
-  test('should throw exepction on assignment', () => {
-    // when
+  test('should not preserve new assignment', () => {
+    // given
     const frozen = deepFreeze({ a: 'a' });
+    // when
+    frozen.a = 'b';
+    frozen.b = 'b';
     // then
-    expect(() => { frozen.a = 'b'; })
-      .toThrow(/Cannot assign to read only property 'a'/);
+    expect(frozen).toEqual({ a: 'a' });
   });
 
   test('should create a copy of the argument', () => {

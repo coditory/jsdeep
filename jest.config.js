@@ -6,6 +6,7 @@ module.exports = {
     '<rootDir>/node_modules/',
     '<rootDir>/test/'
   ],
+  transform: undefined,
   coverageThreshold: {
     global: {
       branches: 90,

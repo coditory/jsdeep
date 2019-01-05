@@ -1,4 +1,4 @@
-import { deepGet } from './index';
+const { deepGet } = require('./index');
 
 describe('deepGet:', () => {
   test('should get a prop - string query', () => {

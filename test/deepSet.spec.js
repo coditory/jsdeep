@@ -1,4 +1,4 @@
-import { deepSet } from './index';
+const { deepSet } = require('./index');
 
 describe('deepSet:', () => {
   test('should create new parent objects and copy siblings', () => {

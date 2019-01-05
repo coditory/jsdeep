@@ -7,7 +7,7 @@
 
 A library that contains basic operations on nested json structures.
 
-[Demo page](https://jsbin.com/fugeranaro/edit?html,js,console)
+[Demo page](https://jsbin.com/bumijigefo/edit?html,js,console)
 
 ## Features
 
@@ -31,7 +31,8 @@ const frozen = deepFreeze(obj);
 console.log(frozen);
 // Output: { x: { y: { z: true } } }
 frozen.x.y.z = false;
-// Output: TypeError: Cannot assign to read only property 'z'
+console.log(frozen);
+// Output: { x: { y: { z: true } } }
 ```
 
 ### Deep copy

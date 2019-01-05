@@ -1,4 +1,4 @@
-import { deepCopy } from './index';
+const { deepCopy } = require('./index');
 
 describe('deepCopy:', () => {
   test('should copy an object', () => {

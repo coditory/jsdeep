@@ -1,4 +1,4 @@
-import { deepEqual } from './index';
+const { deepEqual } = require('./index');
 
 const someSymbol = Symbol('abc');
 
