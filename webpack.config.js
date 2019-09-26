@@ -1,12 +1,12 @@
 const path = require('path');
 const libraryName = require('./package').name.split('/').pop();
 
-const outputFile = (opts) =>
+const outputFile = opts =>
   opts.production
     ? `${libraryName}.min.js`
     : `${libraryName}.js`;
 
-const webpackConfig = (opts) => ({
+const webpackConfig = opts => ({
   entry: './lib',
   devtool: !opts.production && 'source-map',
   module: {
