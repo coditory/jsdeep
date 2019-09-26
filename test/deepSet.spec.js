@@ -51,4 +51,11 @@ describe('deepSet:', () => {
     // then
     expect(obj).toEqual({ x: { y: { z: 123 } } });
   });
+
+  test('should set another root property', () => {
+    // when
+    const obj = deepSet({ x: 'X' }, 'y', '123');
+    // then
+    expect(obj).toEqual({ x: 'X', y: '123' });
+  });
 });
