@@ -30,7 +30,7 @@ const webpackConfig = opts => ({
   }
 });
 
-const createConfig = (opts) => {
+const createConfig = opts => {
   const mode = opts.mode || 'production';
   // eslint-disable-next-line
   console.error(`Starting webpack in mode: ${mode}`);
