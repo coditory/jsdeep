@@ -1,6 +1,6 @@
 # JSDeep - deep operations on json objects
 
-[![Travis Build](https://img.shields.io/travis/coditory/jsdeep.svg?style=flat-square)](https://travis-ci.org/coditory/jsdeep)
+[![Travis Build](https://img.shields.io/travis/coditory/jsdeep.svg?style=flat-square)](https://travis-ci.com/coditory/jsdeep)
 [![Coverage](https://img.shields.io/coveralls/coditory/jsdeep.svg?style=flat-square)](https://coveralls.io/github/coditory/jsdeep)
 [![NPM Version](https://img.shields.io/npm/v/@coditory/jsdeep.svg?style=flat-square)](http://npm.im/jsdeep)
 [![NPM Downloads](https://img.shields.io/npm/dm/@coditory/jsdeep.svg?style=flat-square)](http://npm-stat.com/charts.html?package=jsdeep)
